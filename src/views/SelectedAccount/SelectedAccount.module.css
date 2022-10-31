@@ -1,0 +1,30 @@
+.button_container{
+    width:100vw;
+    height:15vw;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+.button_container > button {
+    margin: 0px 0px 20px 20px;
+}
+.content_container{
+    height:40vh;
+    font-size: 26px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.content_container > section {
+    width:50%;
+    text-align: start;
+    margin:10px 0px;
+}
+.titles_container{
+    height:20vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
