@@ -3,8 +3,11 @@ import Button from "../../components/Button/Button";
 import styles from "./SelectedAccount.module.css";
 import { useContext } from "react";
 import { AccountsContext } from "../../context/AccountsContext";
+import { useNavigate } from "react-router-dom";
+
 const SelectedAccount = () => {
   const { accountState } = useContext(AccountsContext);
+  const navigate = useNavigate();
   const options = {
     CC: "Cuenta Corriente",
     CA: "Caja de Ahorro",
@@ -34,7 +37,7 @@ const SelectedAccount = () => {
         </section>
       </div>
       <section className={styles.button_container}>
-        <Button>Salir</Button>
+        <Button onClick={() => navigate("/")}>Salir</Button>
       </section>
     </>
   );
