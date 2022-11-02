@@ -1,17 +1,45 @@
 import { createContext } from "react";
 import { useReducer } from "react";
+import { createPagination } from "../utils";
 export const AccountsContext = createContext();
 export default function AccountProvider({ children }) {
   const initialState = {
+    actualPage: 1,
     accounts: [],
     selectedAccount: null,
   };
   function reducer(state, action) {
     switch (action.type) {
       case "ADD_ACCOUNT":
-        return { ...state, accounts: action.payload.accounts };
+        const accounts = createPagination([...action.payload.accounts]);
+
+        return { ...state, accounts: accounts };
       case "SELECT_ACCOUNT":
-        return { ...state, selectedAccount: action.payload.selectedAccount };
+        const accountNumber = action.payload.accountNumber;
+        console.log("accountNumber", accountNumber);
+        const selectedAccount = state.accounts[state.actualPage - 1].find(
+          (account) => account.n === accountNumber
+        );
+        return { ...state, selectedAccount: selectedAccount };
+      case "NEXT_PAGE":
+        if (state.actualPage < state.accounts.length) {
+          return {
+            ...state,
+            actualPage: state.actualPage + 1,
+          };
+        } else {
+          return state;
+        }
+      case "PREV_PAGE":
+        if (state.actualPage > 0) {
+          return {
+            ...state,
+            actualPage: state.actualPage - 1,
+          };
+        } else {
+          return state;
+        }
+
       default:
         throw new Error();
     }

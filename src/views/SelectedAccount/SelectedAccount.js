@@ -1,7 +1,15 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Button from "../../components/Button/Button";
 import styles from "./SelectedAccount.module.css";
+import { useContext } from "react";
+import { AccountsContext } from "../../context/AccountsContext";
 const SelectedAccount = () => {
+  const { accountState } = useContext(AccountsContext);
+  const options = {
+    CC: "Cuenta Corriente",
+    CA: "Caja de Ahorro",
+  };
+
   return (
     <>
       <Navbar />
@@ -12,15 +20,17 @@ const SelectedAccount = () => {
       <div className={styles.content_container}>
         <section>
           <span>Saldo de la cuenta:</span>
-          <span>15000</span>
+          <span>{accountState?.selectedAccount?.saldo}</span>
         </section>
         <section>
           <span>Tipo de cuenta:</span>
-          <span>Caja de Ahorro en Pesos</span>
+          <span>
+            {options[accountState?.selectedAccount?.tipo_letras.toUpperCase()]}
+          </span>
         </section>
         <section>
           <span>Numero de cuenta:</span>
-          <span>xxxxxxxxxxxxxxxxxx</span>
+          <span>{accountState?.selectedAccount?.n}</span>
         </section>
       </div>
       <section className={styles.button_container}>
