@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
 body{
     font-family:sans-serif;
     margin:0px;
@@ -13,3 +16,4 @@ h1{
     font-size: 45px;
     margin:0px;
 }
+`;

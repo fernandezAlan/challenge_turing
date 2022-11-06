@@ -1,9 +1,5 @@
-import styles from "./Button.module.css";
+import { BasicButton } from "../../styled-components/Buttons";
 const Button = ({ children, onClick }) => {
-  return (
-    <button className={styles.button} onClick={onClick}>
-      {children}
-    </button>
-  );
+  return <BasicButton onClick={onClick}>{children}</BasicButton>;
 };
 export default Button;

@@ -1,11 +1,17 @@
-import Navbar from "../../components/Navbar/Navbar";
+//import Navbar from "../../components/Navbar/Navbar";
+import { Navbar } from "../../styled-components/navbar";
 import Button from "../../components/Button/Button";
-import styles from "./Home.module.css";
+
 import AccountPreview from "../../components/AccountPreview/AccountPreview";
 import { useContext } from "react";
 import { AccountsContext } from "../../context/AccountsContext";
 import { useEffect, useState } from "react";
-import { getAccountsHandler, getAccounts } from "../../utils";
+import { getAccountsHandler } from "../../utils";
+import {
+  TitlesContainer,
+  AccountsContainer,
+  ButtonContainer,
+} from "../../styled-components/Container";
 import NextPrevButton from "../../components/NextPrevButton/NextPrevButton";
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -23,11 +29,11 @@ const Home = () => {
     <>
       <Navbar />
       <main>
-        <div className={styles.titles_container}>
+        <TitlesContainer>
           <h2>Consulta tu Saldo</h2>
           <h1>Selecciona la Cuenta a Consultar</h1>
-        </div>
-        <section className={styles.accounts_container}>
+        </TitlesContainer>
+        <AccountsContainer>
           {accountState.accounts[accountState.actualPage - 1]?.length <= 4 && (
             <NextPrevButton type={"PREV_PAGE"}>
               {"<< Opciones Anteriores"}
@@ -47,10 +53,10 @@ const Home = () => {
               {"Más Opciones >>"}
             </NextPrevButton>
           ) : null}
-        </section>
-        <section className={styles.button_container}>
+        </AccountsContainer>
+        <ButtonContainer>
           <Button>Salir</Button>
-        </section>
+        </ButtonContainer>
       </main>
     </>
   );
