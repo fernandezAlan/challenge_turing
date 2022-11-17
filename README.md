@@ -40,3 +40,6 @@ npm start : inicia el proyecto
  ```bash
 npm run build : compila todo el proyecto para tenerlo listo para producción
 ```
+ ```bash
+npm run test : ejecuta los test del proyecto
+```
