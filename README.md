@@ -27,19 +27,20 @@ Número de Cuenta
 
    Una vez clonado el proyecto necesitas instalar las dependencias necesarias con el siguiente script: 
    ```bash
-npm install : para instalar las dependencias  necesarias
+npm install 
 ```
 
-Una vez instaladas todas las dependencias  puedes ejecutar el siguiente script para levantar el proyecto de forma local 
+  Una vez instaladas todas las dependencias  puedes ejecutar el siguiente script para levantar el proyecto de forma local 
 
  ```bash
-npm start : inicia el proyecto
+npm start 
 ```
-
-
+  Ejecutar el siguiente comando para correr los test del proyecto
+ ```bash
+npm run test 
+```
+  Ejecutar el siguiente comando para compilar el proyecto para producción
  ```bash
 npm run build : compila todo el proyecto para tenerlo listo para producción
 ```
- ```bash
-npm run test : ejecuta los test del proyecto
-```
+
