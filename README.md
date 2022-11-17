@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# CHALLENGE- TURING
+***
+  Desarrollar una web utilizando JavaScript o cualquier FW de front. permita hacer lo siguiente:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Consumir del api o Json los datos de la cuenta y mostrarlos según las imágenes que se encuentran al final del documento.
 
-## Available Scripts
+* Se deben mostrar las cuentas cuya moneda sea pesos o dólares.
 
-In the project directory, you can run:
+* Se deben mostrar las cuentas cuyo tipo de cuenta sea Caja de Ahorro (CA) y Cuenta Corriente (CC).
 
-### `npm start`
+* Se deben mostrar dentro de los botones el tipo de cuenta en letras y el numero de la misma.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Se deben mostrar máximo 6 botones por pantalla, si se tienen más de 6 cuentas en la primera pantalla se deben mostrar 5 más un botón de siguiente, en el caso de hacer click en siguiente paginación se debe mostrar un botón anterior que permita volver a la anterior información de cuentas, si hay más cuentas debe mostrar el botón siguiente como se muestra en las imágenes de ejemplo al final de documento.
+Al hacer click en cualquiera de las cuentas se debe mostrar en pantalla la siguiente información:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Saldo
+Tipo de Cuenta
+Número de Cuenta
 
-### `npm test`
+  ## Tecnologías
+  * [React.js](https://es.reactjs.org/): Version 18.2.0
+  * [styled-components](https://styled-components.com/) Version 5.3.6
+  * [Jest](https://jestjs.io/) version 26.6.0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+  ## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Una vez clonado el proyecto necesitas instalar las dependencias necesarias con el siguiente script: 
+   ```bash
+npm install : para instalar las dependencias  necesarias
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Una vez instaladas todas las dependencias  puedes ejecutar el siguiente script para levantar el proyecto de forma local 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ ```bash
+npm start : inicia el proyecto
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ ```bash
+npm run build : compila todo el proyecto para tenerlo listo para producción
+```
+## Notas
