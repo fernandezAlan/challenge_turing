@@ -19,18 +19,17 @@ const Home = () => {
   // const [actualPage, setActualPage] = useState(0);
   const { accountState, dispatch } = useContext(AccountsContext);
   useEffect(() => {
+    const ac = new AbortController();
     getAccountsHandler({ setError, setLoading, dispatch });
+    return () => ac.abort();
   }, []);
-  useEffect(() => {
-    console.log("accountState", accountState);
-  }, [accountState]);
 
   return (
     <>
       <Navbar />
       <main>
         <TitlesContainer>
-          <h2>Consulta tu Saldo</h2>
+          <h2>Consulta de Saldo</h2>
           <h1>Selecciona la Cuenta a Consultar</h1>
         </TitlesContainer>
         <AccountsContainer>
@@ -40,10 +39,11 @@ const Home = () => {
             </NextPrevButton>
           )}
           {accountState.accounts[accountState.actualPage - 1]?.map(
-            (account) => (
+            (account, i) => (
               <AccountPreview
                 tipo_letras={account.tipo_letras}
                 num={account.n}
+                key={i + account.n}
               />
             )
           )}

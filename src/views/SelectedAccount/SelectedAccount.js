@@ -22,7 +22,7 @@ const SelectedAccount = () => {
     <>
       <Navbar />
       <TitlesContainer>
-        <h2>Consulta de saldo</h2>
+        <h2>Consulta de Saldo</h2>
         <h1>Este es tu saldo actual</h1>
       </TitlesContainer>
       <ContentContainer>

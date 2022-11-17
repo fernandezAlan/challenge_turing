@@ -2,8 +2,8 @@ import { createContext } from "react";
 import { useReducer } from "react";
 import { createPagination } from "../utils";
 export const AccountsContext = createContext();
-export default function AccountProvider({ children }) {
-  const initialState = {
+export default function AccountProvider({ children, initialState }) {
+  const defaultState = {
     actualPage: 1,
     accounts: [],
     selectedAccount: null,
@@ -16,7 +16,7 @@ export default function AccountProvider({ children }) {
         return { ...state, accounts: accounts };
       case "SELECT_ACCOUNT":
         const accountNumber = action.payload.accountNumber;
-        console.log("accountNumber", accountNumber);
+
         const selectedAccount = state.accounts[state.actualPage - 1].find(
           (account) => account.n === accountNumber
         );
@@ -44,7 +44,10 @@ export default function AccountProvider({ children }) {
         throw new Error();
     }
   }
-  const [accountState, dispatch] = useReducer(reducer, initialState);
+  const [accountState, dispatch] = useReducer(
+    reducer,
+    initialState ? initialState : defaultState
+  );
 
   return (
     <AccountsContext.Provider value={{ accountState, dispatch }}>

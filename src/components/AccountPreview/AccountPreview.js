@@ -19,11 +19,13 @@ const AccountPreview = ({ tipo_letras, num }) => {
     navigate("/account");
   };
   return (
-    <AccountPreviewButton onClick={handleOnClick}>
-      <span>{options[tipo_letras?.toUpperCase()]}</span>
-      <br />
-      <span>{`Nro: ${num}`}</span>
-    </AccountPreviewButton>
+    <div data-testid="account-preview-button">
+      <AccountPreviewButton onClick={handleOnClick}>
+        <span>{options[tipo_letras?.toUpperCase()]}</span>
+        <br />
+        <span>{`Nro: ${num}`}</span>
+      </AccountPreviewButton>
+    </div>
   );
 };
 
