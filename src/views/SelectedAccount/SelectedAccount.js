@@ -7,6 +7,8 @@ import {
   ButtonContainer,
   TitlesContainer,
   ContentContainer,
+  AccountSubContainer,
+  AccountsContainer
 } from "../../styled-components/Container";
 import { SectionContent } from "../../styled-components/Sections";
 
@@ -25,6 +27,7 @@ const SelectedAccount = () => {
         <h2>Consulta de Saldo</h2>
         <h1>Este es tu saldo actual</h1>
       </TitlesContainer>
+      <AccountsContainer>
       <ContentContainer>
         <SectionContent>
           <span>Saldo de la cuenta:</span>
@@ -44,6 +47,7 @@ const SelectedAccount = () => {
       <ButtonContainer>
         <Button onClick={() => navigate("/")}>Salir</Button>
       </ButtonContainer>
+      </AccountsContainer>
     </>
   );
 };

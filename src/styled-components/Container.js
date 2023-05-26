@@ -8,17 +8,20 @@ export const TitlesContainer = styled.div`
 `;
 
 export const AccountsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 150px 150px;
-  grid-gap: 25px;
-  height: 50vh;
-  padding: 0px 30px;
+ width:950px;
+ margin:auto;
 `;
 
+export const AccountSubContainer = styled.div`
+display: grid;
+grid-template-columns: 300px 300px 300px;
+grid-template-rows: 150px 150px;
+grid-gap: 25px;
+height: 325px;
+padding: 0px 30px;
+`
+
 export const ButtonContainer = styled.div`
-  width: 100vw;
-  height: 15vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
