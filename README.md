@@ -19,8 +19,8 @@ Número de Cuenta
 
   ## Tecnologías
   * [React.js](https://es.reactjs.org/): Version 18.2.0
-  * [styled-components](https://styled-components.com/) Version 5.3.6
-  * [Jest](https://jestjs.io/) version 26.6.0
+  * [styled-components](https://styled-components.com/) Version 5.3.10
+  * [Jest](https://jestjs.io/) version 29.5.0
 
 
   ## Instalación
